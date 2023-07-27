@@ -1,0 +1,16 @@
+<div class="cho">
+<mat-card style="background-color: #FFFFE0; display: flex; justify-content: center; align-items: center;" class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{itemDog.name}}</mat-card-title>
+      <mat-card-subtitle>Price: 2000</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="{{itemDog.image}}">
+    <mat-card-content>
+      <p>
+        {{itemDog.description}}
+      </p>
+    </mat-card-content>
+    <button id="tentaone" type="button" (click)="tenne()"> THÊM</button>
+  </mat-card>
+</div>

@@ -1,0 +1,27 @@
+<div >
+    <button (click)="close()">X</button>
+</div>
+<div *ngFor="let item of cart"> 
+    <mat-card style="background-color: #FFFFE0; display: flex; justify-content: center; align-items: center;" class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>{{item.name}}</mat-card-title>
+          <mat-card-subtitle>
+            Price: {{item.price}}
+            quantity: {{item.quantity}}
+            total: {{item.price*item.quantity}}
+          </mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="{{item.image}}">
+        <mat-card-content>
+          <p>
+            {{item.description}}
+          </p>
+        </mat-card-content>
+      </mat-card>
+</div>
+<div >
+<button (click)="total()">
+    Thanh Toán
+</button>
+</div>
