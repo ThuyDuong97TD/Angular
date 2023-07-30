@@ -33,7 +33,9 @@ export class ServicesService {
         'https://demoda.vn/wp-content/uploads/2022/01/hinh-nen-cho-800x509.jpg',
     },
   ];
-  constructor() {
+  constructor(public cardService: ServicesService) {
 
-   }
+  }
+
+   
 }
