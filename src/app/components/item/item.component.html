@@ -1,16 +1,18 @@
-<div class="cho">
-<mat-card style="background-color: #FFFFE0; display: flex; justify-content: center; align-items: center;" class="example-card">
-    <mat-card-header>
-      <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>{{itemDog.name}}</mat-card-title>
-      <mat-card-subtitle>Price: 2000</mat-card-subtitle>
-    </mat-card-header>
-    <img mat-card-image src="{{itemDog.image}}">
-    <mat-card-content>
-      <p>
-        {{itemDog.description}}
-      </p>
-    </mat-card-content>
-    <button id="tentaone" type="button" (click)="tenne()"> THÊM</button>
-  </mat-card>
-</div>
+<mat-card class="example-card">
+
+  <img mat-card-image src="{{itemDog.image}}" alt="Photo of a Shiba Inu">
+  <mat-card-content>
+    <mat-card-title>{{itemDog.name}}</mat-card-title>
+    <p> {{itemDog.description}} </p>
+      <!-- The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+      bred for hunting. -->
+    
+    <mat-card-title> {{itemDog.price}}</mat-card-title>
+  </mat-card-content>
+  <div >
+    <mat-card-actions id="nutthem" >
+      <button id="clickthem" (click)="them()">Thêm</button>
+    </mat-card-actions>
+  </div>
+</mat-card>

@@ -1,0 +1,56 @@
+#nutthanhtoan{
+
+    border: 1px solid white;
+    border-radius: 10px;
+    width: 150px;
+    padding: 10px;
+    color: black;
+    justify-items: center;
+   align-items: center;
+   transition: all 0.5s ease-in-out;
+   &:hover {
+     background-color: rgb(235, 241, 243);
+     filter: invert(1);
+     transition: all 0.5s ease-in-out;
+   }
+}
+#nut-x{
+    border: 1px solid white;
+    border-radius: 10px;
+    width: 45px;
+    padding: 10px;
+    color: black;
+    justify-items: center;
+   align-items: center;
+   transition: all 0.5s ease-in-out;
+   &:hover {
+     background-color: rgb(235, 241, 243);
+     filter: invert(1);
+     transition: all 0.5s ease-in-out;
+   }
+}
+.chinhsuanut{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#delete{
+    border: 1px solid white;
+    border-radius: 10px;
+    width: 150px;
+    padding: 10px;
+    color: black;
+    justify-items: center;
+   align-items: center;
+   transition: all 0.5s ease-in-out;
+   &:hover {
+     background-color: rgb(55, 192, 241);
+     filter: invert(1);
+     transition: all 0.5s ease-in-out;
+   }
+}
+.vitrinut{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

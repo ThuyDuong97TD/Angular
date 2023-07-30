@@ -1,6 +1,7 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Item } from './models/item.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -15,30 +16,49 @@ export class AppComponent {
   listDog: Item[] = [
     {
       id: 1,
-      name: 'Husky',
-      price: 2000,
+      name: 'Bàn phím cơ AKKO 5075B Plus Black & Cyan',
+      price: 2290000,
       quantity: 1,
-      description: 'Đại ngáo nhưng biết tán gái ^^',
-      image: 'https://qpet.vn/wp-content/uploads/2023/04/Hinh-anh-cho-ngau.jpg',
+      description: 'Tình trạng: Còn hàng',
+      image: 'https://product.hstatic.net/200000722513/product/thumbphim_1a943a5bf0534b369eaef4b1a8ef5246_8b6eff8194ee45d5bddaee9d2a6e40dc_master.gif',
     },
     {
       id: 2,
-      name: 'Tró Lãng Tử ',
-      price: 3000,
+      name: 'Bàn phím Akko PC75 Plus v2 Black Gold ',
+      price: 2590000,
       quantity: 1,
-      description: 'Ngoại hình bóng bẩy, nội tâm đa nghi',
+      description: 'Tình trạng: Còn hàng',
       image:
-        'https://png.pngtree.com/thumb_back/fw800/background/20230610/pngtree-dog-laying-on-the-ground-with-red-roses-image_2901045.png',
+        'https://product.hstatic.net/200000722513/product/thumbphim_157da9b59bd64aa89556ec9bafac9848_19efd0e450a043a691d8466510e38019_master.png',
     },
     {
       id: 3,
-      name: 'Corgi',
-      price: 3000,
+      name: 'Bàn phím Akko 5075b Plus Dragon Ball',
+      price: 2990000,
       quantity: 1,
-      description: 'Chân ngắn, mặt xấu, nhưng rất dễ thương',
+      description: 'Tình trạng: Còn hàng',
       image:
-        'https://demoda.vn/wp-content/uploads/2022/01/hinh-nen-cho-800x509.jpg',
+        'https://product.hstatic.net/200000722513/product/thumbphim_d829ff88d74d4ababb105793cd37dd09_957965f2d37b4182a039f45a015eff33_master.gif',
     },
+    {
+      id: 4,
+      name: 'Bàn phím cơ AKKO MOD007 PC Blue on White',
+      price: 2490000,
+      quantity: 1,
+      description: 'Tình trạng: Còn hàng',
+      image:
+        'https://product.hstatic.net/200000722513/product/thumbphim-recovered_75cf14850d4247789be5a1763968f569_89aa2774fcfb4534adde6d02d89bbe4e_master.gif',
+    },
+    {
+      id: 5,
+      name: 'Bàn phím cơ AKKO 5075B Plus Naruto',
+      price: 2990000,
+      quantity: 1,
+      description: 'Tình trạng: Còn hàng',
+      image:
+        'https://product.hstatic.net/200000722513/product/thumbphim_9e7f596eb320400abe489ac4ba9ecd76_918b4ff71da54bb98ab860a50adb83d7_master.gif',
+    },
+    
   ];
   addItem(item: any) {
     item.id = this.listDog.length + 1;
@@ -60,5 +80,15 @@ export class AppComponent {
   }
   close() {
     this.dialog?.nativeElement.close();
+  }
+  openDialogCart(){
+    this.dialog?.nativeElement.showModal();
+  }
+  navigatethemcart(){
+    this.router.navigate(['/themcart']);
+  }
+
+  constructor(public router: Router) {
+
   }
 }

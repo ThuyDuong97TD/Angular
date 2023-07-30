@@ -13,33 +13,29 @@ export class FormComponent {
   // listDog: Item[] = [];
   form = new FormGroup({
     name: new FormControl(''),
-    price: new FormControl(2000),
+    price: new FormControl(200000),
     quantity: new FormControl(1),
     description: new FormControl(''),
   });
   onSubmit() {
     console.log(this.form.value);
-    // alert(JSON.stringify(this.form.value));
+
     let Dog = <Item>{
       name: this.form.value.name,
       price: this.form.value.price,
       quantity: this.form.value.quantity,
       description: this.form.value.description,
-      image: 'https://qpet.vn/wp-content/uploads/2023/04/Hinh-anh-cho-ngau.jpg',
+      image: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MK2A3?wid=1200&hei=630&fmt=jpeg&qlt=95&.v=1628010471000',
     };
-  //   this.listDog.push(Dog);
-    // let total = 0;
-    // for (let i = 0; i < this.listDog.length; i++) {
-    //   total += this.listDog[i].price * this.listDog[i].quantity;
-    // }
-    // // console.log(this.listDog);
-    // alert('Tổng tiền là: ' + total);
-  // console.log(Dog);
-  // alert(Dog.name)
+
   this.itemDog.emit(Dog);
   }
   openDialog() {
     this.openCart.emit();
+  }
+  @Output() closeFormDialog = new EventEmitter();
+  close() { 
+    this.closeFormDialog.emit();
   }
 }
 

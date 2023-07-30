@@ -9,7 +9,7 @@ import { Item } from 'src/app/models/item.model';
 export class ItemComponent {
   @Input() itemDog!: Item;
   @Output() onCartDog = new EventEmitter();
-  tenne() {
+  them() {
     this.onCartDog.emit();
     alert("Đã thêm vào giỏ hàng");
   }

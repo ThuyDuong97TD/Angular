@@ -1,20 +1,45 @@
-<div style="
+<!-- <div style="
 
 height: 50%;
 min-height: 100vh;
 
 position: absolute;
 width: 50%;
-z-index: -1;"> <img src="https://khoinguonsangtao.vn/wp-content/uploads/2022/08/anh-nen-mau-hong-pastel-tron-dam-hinh-dang-cay-xanh.jpeg" alt=""> </div>
-<div > 
-  <app-form (openCart)="showDialog()" (itemDog)="addItem($event)"></app-form> 
+z-index: -1;"> <img src="https://khoinguonsangtao.vn/wp-content/uploads/2022/08/anh-nen-mau-hong-pastel-tron-dam-hinh-dang-cay-xanh.jpeg" alt=""> </div> -->
+
+<router-outlet></router-outlet>
+
+<div>
+  <div style="width: 100%; height:60px; display: flex; justify-content: end; background-color: white; padding-right: 50px;" (click)="openDialogCart()">
+    <div style=" height: 30px; font-size: 15px; display: flex; column-gap: 5px; margin-top: 20px;">
+      <img src="https://akkogear.com.vn/wp-content/uploads/2020/05/logo-akkogear.png" alt="">
+    </div>
+    <p style=" padding-top: 20px; font-weight: bold; font-size: 15px; padding-left: 30px;"> Trang chủ</p>
+    <p style="padding-top: 20px;font-weight: bold; font-size: 15px; padding-left: 30px;"> Bàn Phím</p>
+    <p style="padding-top: 20px;padding-right: 1300px; font-weight: bold; font-size: 15px; padding-left: 30px;">Phụ Kiện Custom</p>
+    <img style="width: 50px; height: 50px;" src="https://png.pngtree.com/png-clipart/20191122/original/pngtree-cart-icon-isolated-on-abstract-background-png-image_5165752.jpg" alt="" />
+    <div>
+    
+    </div>
+  </div>
 
 </div>
-
-<div style="margin: 0 auto;" *ngFor="let item of listDog">
-
-  <app-item (onCartDog)="addCart(item)" [itemDog]="item"></app-item> 
+<div> 
+  <app-carousel> 
+    
+  </app-carousel>
 </div>
-<dialog #cart> 
-  <app-dialog (closeDialog)="close()" [cart]="carts"> </app-dialog>
-</dialog>
+<div class="dogs">
+  <div *ngFor="let item of listDog">
+    <app-item (onCartDog)="addCart(item)" [itemDog]="item"> </app-item>
+  </div>
+</div>
+
+<div class="chinhsua">
+  <div>
+    <app-form (openCart)="showDialog()" (itemDog)="addItem($event)"></app-form>
+  </div>
+  <dialog #cart>
+    <app-dialog (closeDialog)="close()" [cart]="carts"> </app-dialog>
+  </dialog>
+</div>
