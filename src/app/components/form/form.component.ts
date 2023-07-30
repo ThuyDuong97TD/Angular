@@ -25,7 +25,7 @@ export class FormComponent {
       price: this.form.value.price,
       quantity: this.form.value.quantity,
       description: this.form.value.description,
-      image: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MK2A3?wid=1200&hei=630&fmt=jpeg&qlt=95&.v=1628010471000',
+      image: 'https://product.hstatic.net/200000722513/product/umbphim-recovered-recovered-recovered_b5c814186337478cadc98c2395fda090_5323cd03000e4ebe91127cbaac626292_master.gif',
     };
 
   this.itemDog.emit(Dog);
