@@ -3,6 +3,11 @@
   max-width: 300px;
   background-color: white;
   margin-top: 50px;
+  transition: all 0.5s ease-in-out;
+  &:hover{
+    filter: blur(1px);
+    transition: all 0.5s ease-in-out;
+  }
 
 }
 

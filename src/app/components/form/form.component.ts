@@ -16,6 +16,7 @@ export class FormComponent {
     price: new FormControl(200000),
     quantity: new FormControl(1),
     description: new FormControl(''),
+    image: new FormControl(''),
   });
   onSubmit() {
     console.log(this.form.value);
@@ -25,18 +26,16 @@ export class FormComponent {
       price: this.form.value.price,
       quantity: this.form.value.quantity,
       description: this.form.value.description,
-      image: 'https://product.hstatic.net/200000722513/product/umbphim-recovered-recovered-recovered_b5c814186337478cadc98c2395fda090_5323cd03000e4ebe91127cbaac626292_master.gif',
+      image: this.form.value.image,
     };
 
-  this.itemDog.emit(Dog);
+    this.itemDog.emit(Dog);
   }
   openDialog() {
     this.openCart.emit();
   }
   @Output() closeFormDialog = new EventEmitter();
-  close() { 
+  close() {
     this.closeFormDialog.emit();
   }
 }
-
-
