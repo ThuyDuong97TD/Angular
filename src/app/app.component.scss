@@ -23,7 +23,15 @@
 
 }
 #login{
-  color: black;
+  color: white;
+  border : 1px solid white;
+  border-radius: 15px;
+  background-color: rgb(206, 194, 194);
+  transition: all 0.5s ease-in-out;
+  &:hover{
+    filter: drop-shadow(0 0 0.75rem gray);
+    transition: all 0.5s ease-in-out;
+  }
 }
 #logout{
   color: white;

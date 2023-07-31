@@ -23,6 +23,11 @@
     background-color: #87CEFA;
     color: white;
     border: 2px solid pink;
+    transition: all 0.5s ease-in-out;
+    &:hover{
+      filter: drop-shadow(0 0 0.75rem pink);
+      transition: all 0.5s ease-in-out;
+    }
 }
 #ten{
     border-radius: 10px;
@@ -46,6 +51,11 @@
     background-color: #E6E6FA;
     border: 2px solid pink;
 
+}
+#anh{
+    border-radius: 10px;
+    background-color: #E6E6FA;
+    border: 2px solid pink;
 }
 #nutCheckData{
     border: 2px solid pink;
