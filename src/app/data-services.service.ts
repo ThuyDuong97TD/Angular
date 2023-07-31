@@ -1,16 +1,15 @@
 import { Injectable } from '@angular/core';
-import { Item } from '../models/item.model';
+import { Item } from './models/item.model';
 import {
   Firestore,
   addDoc,
   collection,
   collectionSnapshots,
 } from '@angular/fire/firestore';
-
 @Injectable({
   providedIn: 'root',
 })
-export class ServicesService {
+export class DataServicesService {
   listDog: Item[] = [
     {
       id: 'g',
@@ -40,10 +39,7 @@ export class ServicesService {
     },
   ];
   itemCollection = collection(this.firestore, 'item');
-  constructor(
-    public cardService: ServicesService,
-    private firestore: Firestore
-  ) {
+  constructor(private firestore: Firestore) {
     this.getData();
   }
   getData() {
