@@ -1,0 +1,30 @@
+<!-- <button id="nut-x" (click)="close()">X</button> -->
+<div class="DogBoss">
+    <!-- <div (click)="openDialog()">
+      <img style="width: 50px; height: 50px;" src="https://nhagon.vn/tp/T0295/img/71788/Icongiohang.png" alt="" />
+    </div> -->
+    <form [formGroup]="form">
+      <div class="DogA">
+        <label for="first-name">Name: </label> <br />
+        <input id="ten" type="text" formControlName="name" /> <br />
+  
+        <label for="last-name">Price: </label> <br />
+        <input id="gia" type="number" formControlName="price" /> <br />
+  
+        <label for="last-name">Quantity: </label> <br />
+        <input id="soluong" type="number" formControlName="quantity" /> <br />
+  
+        <label for="last-name">Description: </label> <br />
+        <input id="mota" type="text" formControlName="description" /> <br />
+  
+        <label for="last-name">Image link: </label> <br />
+        <input id="anh" type="text" formControlName="image" /> <br />
+  
+        <button id="nut" type="submit" (click)="onSubmit()">Submit</button>
+  
+        <br />
+      </div>
+    </form>
+    <!-- </div> -->
+  </div>
+  

@@ -41,6 +41,7 @@ export class DataServicesService {
         'https://demoda.vn/wp-content/uploads/2022/01/hinh-nen-cho-800x509.jpg',
     },
   ];
+  itemBanPhim : Item = <Item>{};
   itemCollection = collection(this.firestore, 'item');
   constructor(private firestore: Firestore) {
     this.getData();
@@ -94,4 +95,5 @@ export class DataServicesService {
     // );
     return result;
   }
+  
 }

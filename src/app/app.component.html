@@ -99,15 +99,26 @@ z-index: -1;"> <img src="https://khoinguonsangtao.vn/wp-content/uploads/2022/08/
 </div>
 <div class="dogs">
   <div *ngFor="let item of listDog">
-    <app-item (onCartDog)="addCart(item)" [itemDog]="item"> </app-item>
+    <app-item (onItembanphim)="changeItemBanPhim($event)" (onCartDog)="addCart(item)" [itemDog]="item"> </app-item>
   </div>
 </div>
 
 <div class="chinhsua">
-  <div>
+  <!-- <div>
     <app-form (openCart)="showDialog()" (itemDog)="addItem($event)"></app-form>
-  </div>
+  </div> -->
   <dialog #cart>
     <app-dialog (closeDialog)="close()" [cart]="carts"> </app-dialog>
   </dialog>
+</div>
+
+<div class="chinhsua">
+  <div style="display: flex;" *ngIf="loginlogoutService.user != null">
+    <app-form (openCart)="showDialog()" (itemDog)="addItem($event)"></app-form>
+    <app-formedit [itemDog]="this.itemBanPhim"></app-formedit>
+  </div>
+  <!-- <dialog #cart>
+    <app-dialog (closeDialog)="close()" [cart]="carts"> </app-dialog>
+  </dialog> -->
+
 </div>

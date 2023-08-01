@@ -15,7 +15,7 @@ export class AppComponent {
   @ViewChild('cart') dialog: ElementRef<HTMLDialogElement> | undefined;
   title = 'my-app';
   carts: Item[] = [];
-
+  itemBanPhim: Item = <Item>{};
   listDog: Item[] = [
     {
       id: '1',
@@ -97,4 +97,10 @@ export class AppComponent {
     public loginlogoutService: LoginlogoutService,
     private storeServices: DataServicesService
   ) {}
+  changeItemBanPhim(item: Item) {
+    this.itemBanPhim = item;
+    console.log(this.itemBanPhim);
+  }
+
 }
+

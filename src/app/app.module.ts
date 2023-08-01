@@ -33,6 +33,7 @@ import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { StoreModule } from '@ngrx/store';
+import { FormeditComponent } from './components/formedit/formedit.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { StoreModule } from '@ngrx/store';
     ItemComponent,
     FormComponent,
     DialogComponent,
-    CarouselComponent
+    CarouselComponent,
+    FormeditComponent
   ],
   imports: [
     BrowserModule,

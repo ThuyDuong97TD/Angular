@@ -9,6 +9,7 @@ import { Item } from 'src/app/models/item.model';
 export class DialogComponent {
 @Input() cart!: Item[];
 @Output() closeDialog = new EventEmitter();
+
   close() { 
     this.closeDialog.emit();
   }

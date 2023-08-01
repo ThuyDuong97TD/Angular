@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
-import { Auth, GoogleAuthProvider, onAuthStateChanged, signInWithPopup } from '@angular/fire/auth';
+import { Auth, GoogleAuthProvider, User, onAuthStateChanged, signInWithPopup } from '@angular/fire/auth';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoginlogoutService {
   googleProvider = new GoogleAuthProvider();
-  user : any;
+  user :User | null = null;
   constructor(public auth: Auth) { 
     console.log("LoginLogoutService");
     onAuthStateChanged(this.auth, (user) => {
